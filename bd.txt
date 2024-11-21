@@ -1,0 +1,15 @@
+CREATE TABLE Incidencias(
+Id_Incidencia INT PRIMARY KEY,
+Usuario INT,
+Dni_Paciente VARCHAR(11),
+Hc_Paciente VARCHAR(11),
+Especialidad VARCHAR(100),
+Medico VARCHAR(50),
+Turno VARCHAR(50),
+id_Fuente INT,
+Procedencia VARCHAR(30),
+Fecha DATETIME,
+Motivo VARCHAR(300),
+FOREIGN KEY (Usuario) REFERENCES USUARIO(Id_Usuario),
+FOREIGN KEY (id_Fuente) REFERENCES FINANCIAMIENTO(idFuente)
+)
